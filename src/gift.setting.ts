@@ -5,13 +5,13 @@ export const GLOBAL_KEYS = {
 };
 
 // 是否允许对方在抽奖结束后重新抽奖
-export const IS_SHOW_RESTART = false;
+export const IS_SHOW_RESTART = true;
 export interface HomeConfig {
   title: string;
   messages: { key: string; wording: string }[];
   owner: string;
   timeout: 5000;
-  targetGiftIndex: number;
+  targetGiftIndex: number | null;
 }
 
 // 首页配置
@@ -29,7 +29,7 @@ export const homeConfig: HomeConfig = {
   // 抽奖转盘的动画时间，单位毫秒
   timeout: 5000,
   // 指定赠送的礼物的索引（第几个礼物中奖），取值范围 0-8
-  targetGiftIndex: 3,
+  targetGiftIndex: null,
 };
 
 // 礼物清单
@@ -83,14 +83,14 @@ export const gifts: IGift[] = [
   },
   {
     key: "y",
-    name: "1314红包",
-    alias: "1314",
+    name: "188红包",
+    alias: "188",
     image: new URL("./images/6.png", import.meta.url).href,
     description: "“从今往后，我都会在你旁边”",
   },
   {
     key: "u",
-    name: "UR购物券：¥1,000",
+    name: "UR购物券：¥200",
     alias: "UR",
     image: new URL("./images/7.png", import.meta.url).href,
     description: "“UR！买！”",

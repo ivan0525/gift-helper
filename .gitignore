@@ -11,6 +11,7 @@ node_modules
 .DS_Store
 dist
 gift-helper
+gift-helper.zip
 dist-ssr
 coverage
 *.local
